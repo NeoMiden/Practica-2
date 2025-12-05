@@ -1,0 +1,29 @@
+<?php
+// continue
+$next_car = [
+    "Porsche 911",
+    "Ferrari F355",
+    "Mitsubishi EVO",
+    "R34 Skyline",
+    "C8 Corvette"
+];
+
+echo "While Loop<br>";
+
+$i = 0;
+
+while ($i < count($next_car)) {
+    
+    // OJO AQUÍ: $i++ incrementa el valor DESPUÉS de evaluar la condición
+    // Verifica si el carro actual NO es el R34 Skyline
+    if ($next_car[$i++] != "R34 Skyline") {
+        echo $i . "<br>"; // Imprime el número (que ya se incrementó)
+        continue; // SALTA al inicio del while, ignorando lo de abajo
+    }
+
+    // Esta línea solo se ejecuta si el carro ES "R34 Skyline"
+    echo "That's right. I'm getting a skyline.<br>";
+}
+
+echo "Do While Loop<br>";
+?>
