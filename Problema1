@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Problema 1</title>
+</head>
+<body>
+    <!-- Parte 1: El Formulario -->
+    <h2>Formulario de Datos</h2>
+    <!-- El action="" vacío significa que se envía a sí mismo -->
+    <form action="" method="POST">
+        Introduce tu nombre: <input type="text" name="nombre"><br>
+        Introduce la edad: <input type="text" name="edad"><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <hr>
+
+    <!-- Parte 2: Código PHP que procesa el envío -->
+    <?php
+    // Verificamos si hay datos enviados por POST
+    if ($_POST) {
+        echo "<h3>Datos Recibidos:</h3>";
+        
+        // Recorremos el array $_POST
+        // $clave será "nombre" o "edad"
+        // $valor será lo que escribiste
+        foreach ($_POST as $clave => $valor) {
+            echo "El valor de $clave es: $valor <br>";
+        }
+    }
+    ?>
+</body>
+</html>
