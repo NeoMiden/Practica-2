@@ -1,0 +1,16 @@
+<?php
+// Definimos el array asociativo (Posición => Jugador)
+$equipo = array(
+    'portero' => 'Cech', 
+    'defensa' => 'Terry', 
+    'medio' => 'Lampard', 
+    'delantero' => 'Torres'
+);
+
+echo "<h2>Alineación del Equipo</h2>";
+
+// Recorremos el array
+foreach ($equipo as $posicion => $jugador) {
+    echo "El " . $posicion . " es " . $jugador . "<br>";
+}
+?>
