@@ -1,0 +1,16 @@
+<?php
+// Cargamos el archivo XML
+// Asegúrate que 'colores.xml' está en la misma carpeta
+if (file_exists('colores.xml')) {
+    $xml = simplexml_load_file("colores.xml");
+
+    echo "<h2>Colores del XML</h2>";
+
+    // Recorremos cada etiqueta <color> dentro del XML
+    foreach ($xml->color as $color) {
+        echo "El color " . $color->nombre . " tiene el código hexadecimal " . $color->codigo_hexadecimal . "<br>";
+    }
+} else {
+    echo "Error: No se encuentra el archivo colores.xml";
+}
+?>
